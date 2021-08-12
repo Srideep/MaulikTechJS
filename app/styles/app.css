@@ -40,6 +40,7 @@ button {
 
 p {
   line-height: 1.5;
+  font-size: 100%;
   margin-bottom: 15px;
 }
 
@@ -451,8 +452,8 @@ p {
   background: url(../assets/images/south-jersey-rentals-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 
   position: relative;
   top: -25px;

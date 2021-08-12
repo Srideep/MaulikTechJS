@@ -54,46 +54,6 @@
     }
   });
 });
-;define("mauliktechjs/components/people-list", ["exports", "@ember/component", "@ember/template-factory", "@glimmer/component", "@ember/object"], function (_exports, _component, _templateFactory, _component2, _object) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _class;
-
-  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-
-  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
-  /*
-    <h2>{{@title}}</h2>
-  
-  <ul>
-      {{#each @people as |person|}}
-          <li>
-              <button type="button" {{on 'click' (fn this.showPerson person)}}>{{person}}</button>
-          </li>
-      {{/each}}
-  </ul>
-  */
-  {
-    "id": "Lv1Yvu2i",
-    "block": "[[[10,\"h2\"],[12],[1,[30,1]],[13],[1,\"\\n\\n\"],[10,\"ul\"],[12],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,2]],null]],null],null,[[[1,\"        \"],[10,\"li\"],[12],[1,\"\\n            \"],[11,\"button\"],[24,4,\"button\"],[4,[38,2],[\"click\",[28,[37,3],[[30,0,[\"showPerson\"]],[30,3]],null]],null],[12],[1,[30,3]],[13],[1,\"\\n        \"],[13],[1,\"\\n\"]],[3]],null],[13]],[\"@title\",\"@people\",\"person\"],false,[\"each\",\"-track-array\",\"on\",\"fn\"]]",
-    "moduleName": "mauliktechjs/components/people-list.hbs",
-    "isStrictMode": false
-  });
-
-  let PeopleListComponent = (_class = class PeopleListComponent extends _component2.default {
-    showPerson(person) {
-      alert(`The person's name is ${person}!`);
-    }
-
-  }, (_applyDecoratedDescriptor(_class.prototype, "showPerson", [_object.action], Object.getOwnPropertyDescriptor(_class.prototype, "showPerson"), _class.prototype)), _class);
-  _exports.default = PeopleListComponent;
-  (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, PeopleListComponent);
-});
 ;define("mauliktechjs/components/welcome-page", ["exports", "ember-welcome-page/components/welcome-page"], function (_exports, _welcomePage) {
   "use strict";
 
@@ -374,7 +334,10 @@
 
   _exports.default = Router;
   Router.map(function () {
-    this.route('scientists');
+    this.route('about');
+    this.route('contact', {
+      path: '/getting-in-touch'
+    });
   });
 });
 ;define("mauliktechjs/routes/scientists", ["exports", "@ember/routing/route"], function (_exports, _route) {
@@ -472,6 +435,40 @@
     }
   });
 });
+;define("mauliktechjs/templates/about", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "a2KCsGN5",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"About South Jersey Rentals\"],[13],[1,\"\\n    \"],[10,0],[12],[1,\"\\n        \"],[10,2],[12],[1,\"\\n        The South Jersey is a delightful web application created to provide rental\\n        classifieds in the South Jersey area. \\n        It covers the Atlantic, Camden,Salem as well as Burlington\\n        counties.\"],[10,\"br\"],[12],[13],[1,\" \\n        This website can used to lookup rentals ad for single homes,apartments,\\n        townshouses as well as shared accomodations.\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n    \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"contact\"]],[[\"default\"],[[[[1,\"Contact Us\"]],[]]]]],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "moduleName": "mauliktechjs/templates/about.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
+;define("mauliktechjs/templates/contact", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "A79utg8/",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n  \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"Contact Us\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"\\n    We at South Jersey Rentals would love to help you\"],[10,\"br\"],[12],[13],[1,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[13],[1,\"\\n  \"],[10,\"address\"],[12],[1,\"\\n    South Jersey Rentals \\n    \"],[10,2],[12],[1,\"\\n      PO. Box 6963\"],[10,\"br\"],[12],[13],[1,\"\\n      Egg Harbor Township, NJ 08234\\n    \"],[13],[1,\"\\n    \"],[10,3],[14,6,\"tel:856.281.1915\"],[12],[1,\"+1 (856) 281-1915\"],[13],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,3],[14,6,\"mailto:smaulik@mauliktech.com\"],[12],[1,\"smaulik@mauliktech.com\"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About\"]],[]]]]],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "moduleName": "mauliktechjs/templates/contact.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
 ;define("mauliktechjs/templates/index", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
@@ -481,8 +478,8 @@
   _exports.default = void 0;
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "aUPMy/+W",
-    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Welcome to South Jersey Rentals\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"We hope you find exactly what you're looking for in a place to stay.\"],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "id": "KKnAQWXX",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Welcome to South Jersey Rentals\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"We hope you find exactly what you're looking for in a place to stay.\"],[13],[1,\"\\n    \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About Us\"]],[]]]]],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
     "moduleName": "mauliktechjs/templates/index.hbs",
     "isStrictMode": false
   });
