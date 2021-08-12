@@ -472,7 +472,7 @@
     }
   });
 });
-;define("mauliktechjs/templates/application", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+;define("mauliktechjs/templates/index", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -481,26 +481,9 @@
   _exports.default = void 0;
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "W6aCTQIb",
-    "block": "[[[10,\"h1\"],[12],[1,\"PeopleTracker\"],[13],[1,\"\\n\\n\"],[46,[28,[37,1],null,null],null,null,null]],[],false,[\"component\",\"-outlet\"]]",
-    "moduleName": "mauliktechjs/templates/application.hbs",
-    "isStrictMode": false
-  });
-
-  _exports.default = _default;
-});
-;define("mauliktechjs/templates/scientists", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "BXtOaovG",
-    "block": "[[[8,[39,0],null,[[\"@title\",\"@people\"],[\"List of Scientists\",[30,1]]],null]],[\"@model\"],false,[\"people-list\"]]",
-    "moduleName": "mauliktechjs/templates/scientists.hbs",
+    "id": "aUPMy/+W",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Welcome to South Jersey Rentals\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"We hope you find exactly what you're looking for in a place to stay.\"],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "moduleName": "mauliktechjs/templates/index.hbs",
     "isStrictMode": false
   });
 
@@ -581,7 +564,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("mauliktechjs/app")["default"].create({"name":"mauliktechjs","version":"0.0.0+f61cf602"});
+            require("mauliktechjs/app")["default"].create({"name":"mauliktechjs","version":"0.0.0+2e1e4794"});
           }
         
 //# sourceMappingURL=mauliktechjs.map
